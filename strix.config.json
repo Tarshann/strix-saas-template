@@ -1,0 +1,56 @@
+{
+  "version": "1.0.0",
+  "platform": "strix",
+  "template": {
+    "name": "saas-boilerplate",
+    "version": "1.7.6",
+    "framework": "nextjs",
+    "description": "Full-featured SaaS boilerplate with authentication, multi-tenancy, and database"
+  },
+  "features": {
+    "authentication": {
+      "provider": "clerk",
+      "required": true,
+      "envVars": [
+        "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
+        "CLERK_SECRET_KEY"
+      ]
+    },
+    "database": {
+      "orm": "drizzle",
+      "required": true,
+      "envVars": [
+        "DATABASE_URL"
+      ]
+    },
+    "multiTenancy": {
+      "enabled": true,
+      "type": "team-based"
+    },
+    "monitoring": {
+      "sentry": {
+        "enabled": false,
+        "envVars": [
+          "SENTRY_DSN"
+        ]
+      }
+    }
+  },
+  "deployment": {
+    "platform": "vercel",
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
+    "outputDirectory": ".next",
+    "framework": "nextjs"
+  },
+  "healthCheck": {
+    "enabled": true,
+    "endpoint": "/api/health",
+    "interval": 60000
+  },
+  "strixSDK": {
+    "enabled": true,
+    "reportMetrics": true,
+    "reportHealth": true
+  }
+}
