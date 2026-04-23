@@ -4,8 +4,8 @@ import { StickyBanner } from '@/features/landing/StickyBanner';
 
 export const DemoBanner = () => (
   <StickyBanner>
-    Live Demo of SaaS Boilerplate -
+    New · Strix Store is live —
     {' '}
-    <Link href="/sign-up">Explore the User Dashboard</Link>
+    <Link href="/strix-store">watch an agent try to drain the shop →</Link>
   </StickyBanner>
 );
