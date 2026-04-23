@@ -11,3 +11,5 @@ CREATE TABLE IF NOT EXISTS "lead" (
 	"ip_hash" text,
 	"created_at" timestamp DEFAULT now() NOT NULL
 );
+--> statement-breakpoint
+CREATE UNIQUE INDEX IF NOT EXISTS "lead_email_idx" ON "lead" USING btree ("email");

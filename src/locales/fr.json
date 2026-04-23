@@ -14,7 +14,7 @@
   },
   "Hero": {
     "follow_twitter": "Démo live · s'exécute dans votre navigateur",
-    "title": "Empêchez les agents de <important>faire la mauvaise chose</important> — dès la première fois.",
+    "title": "Empêchez les agents de <important>faire la mauvaise chose</important> — dès la première fois, pas trop tard.",
     "description": "Strix, c'est la gouvernance runtime pour les agents IA. Chaque capacité est évaluée par policy avant exécution. Chaque décision émet un reçu vérifiable. Voies rapides là où c'est sûr, murs fermes là où ça ne l'est pas.",
     "primary_button": "Lancer la démo",
     "secondary_button": "Star sur GitHub"

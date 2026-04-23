@@ -15,8 +15,6 @@ import { Env } from './Env';
 let client;
 let drizzle;
 
-// Need a database for production? Check out https://www.prisma.io/?via=saasboilerplatesrc
-// Tested and compatible with Next.js Boilerplate
 if (process.env.NEXT_PHASE !== PHASE_PRODUCTION_BUILD && Env.DATABASE_URL) {
   client = new Client({
     connectionString: Env.DATABASE_URL,
@@ -28,7 +26,6 @@ if (process.env.NEXT_PHASE !== PHASE_PRODUCTION_BUILD && Env.DATABASE_URL) {
     migrationsFolder: path.join(process.cwd(), 'migrations'),
   });
 } else {
-  // Stores the db connection in the global scope to prevent multiple instances due to hot reloading with Next.js
   const global = globalThis as unknown as { client: PGlite; drizzle: PgliteDatabase<typeof schema> };
 
   if (!global.client) {
